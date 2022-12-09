@@ -1,0 +1,10 @@
+{
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [80],
+    "javascript.validate.enable": false,
+    "editor.tabSize": 2,
+    "git.ignoreLimitWarning": true,
+    "editor.codeActionOnSave": {
+        "source.fixAll.eslint" : true
+    }
+}
