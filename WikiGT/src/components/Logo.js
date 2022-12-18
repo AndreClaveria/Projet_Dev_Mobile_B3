@@ -2,18 +2,28 @@ import React from "react";
 import { View } from "react-native";
 import styled from "styled-components/native";
 
-const ImageStyle = styled.Image`
-  width: 100%;
-  float: left;
-  margin-right: 10px;
-`;
+const Logo = ({margintop, fontsize}) => {
+    
+    const ImageStyle = styled.Image`
+        width: 100%;
+        float: left;
+        margin-top: ${margintop}px;
+        margin-right: 5px;
+    `;
 
-const Logo = () => {
+    const WikiText = styled.Text`
+        font-weight: bold;
+        font-size: ${fontsize}px;
+        text-align: center;
+        color: #D4AC85
+    `
+
     return (
         <View>
             <ImageStyle
-            source={require('../images/logoGT.png')}
+            source={require('../images/utils/logoGT.png')}
             />
+            <WikiText>Wiki</WikiText>
         </View>
     )
 }

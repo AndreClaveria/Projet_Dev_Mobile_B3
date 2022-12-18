@@ -1,8 +1,9 @@
 import React from 'react';
-import HomePage from './src/screens/home/HomePage';
+
+import Route from './src/screens/RouteContainer';
 
 export default function App() {
   return(
-    <HomePage/>
+   <Route/>
   )
 }
