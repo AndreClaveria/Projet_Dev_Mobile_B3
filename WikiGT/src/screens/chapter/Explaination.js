@@ -2,7 +2,9 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Button, ScrollView, Image, StyleSheet, TouchableOpacity} from "react-native";
 import styled from "styled-components";
-import ChapterPage from "../home/ChapterPage";
+import WorldBox from "../../components/WorldBox";
+import worldOne from '../../images/World1/World1.jpg';
+import ChapterOne from "./ChapterOne";
 
 const Box = styled.View`
     width: 100%;
@@ -79,9 +81,7 @@ const Tutorial = () => {
             <Image source={require('../../images/utils/GuardianTales.gif')}/>
             <BoxTitle>Good Luck!!</BoxTitle>
             <Box2>
-            <TouchableOpacity onPress={() => navigation.navigate('WorldOne')}>
-              <ChapterImage source={require('../../images/World1/World1.jpg')}/>
-            </TouchableOpacity>
+              <WorldBox picture={worldOne} name={ChapterOne}/>
             </Box2>
           </ScrollView>
         </Box>

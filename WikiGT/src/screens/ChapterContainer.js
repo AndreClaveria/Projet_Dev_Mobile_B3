@@ -47,7 +47,7 @@ const ChapterContainer = () => {
           }}
         />
         <Stack.Screen
-          name="WorldOne"
+          name="ChapterOne"
           component={ChapterOne}
           options={{
             title: 'World 1',
@@ -62,11 +62,11 @@ const ChapterContainer = () => {
           }}
         />
         <Stack.Screen
-          name="WorldTwo"
+          name="ChapterTwo"
           component={ChapterTwo}
         />
         <Stack.Screen
-          name="WorldThree"
+          name="ChapterThree"
           component={ChapterThree}
         />
         

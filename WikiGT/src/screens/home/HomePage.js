@@ -48,7 +48,6 @@ const HomePage = ({navigation}) => {
    
     return(
         <>
-        
         <VideoBackground video={video}/>
         <HomeText>A Link to Classic Adventure</HomeText>
         <Logo margintop={0} fontsize={50}/>
