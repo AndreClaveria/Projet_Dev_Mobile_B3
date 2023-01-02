@@ -3,7 +3,6 @@ import React from "react";
 import { View, Text, Button, ImageBackground, Image, Linking, TouchableOpacity} from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import styled from "styled-components";
-import BackgroundHome from "../../components/BackgroundHome";
 import Logo from "../../components/Logo";
 import CharacterPage from "./CharacterPage";
 import ChapterPage from "./ChapterPage";

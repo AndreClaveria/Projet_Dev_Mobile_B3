@@ -11,6 +11,7 @@ import Tutorial from "../chapter/Explaination";
 import ChapterOne from "../chapter/ChapterOne";
 import ChapterTwo from "../chapter/ChapterTwo";
 import ChapterThree from "../chapter/ChapterThree";
+
 const Box = styled.View`
     
     width: 100%;

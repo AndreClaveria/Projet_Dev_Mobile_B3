@@ -2,8 +2,6 @@ import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Text, Button, Image, ScrollView, TouchableOpacity, Linking} from "react-native";
 import styled from "styled-components";
-import ChapterPage from "../home/ChapterPage";
-
 
 const Box = styled.View`
     width: 100%;

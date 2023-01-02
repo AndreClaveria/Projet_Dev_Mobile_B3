@@ -23,6 +23,7 @@ const WhiteBox = styled.View`
     height: 10px;
 `
 
+
 const WorldBox = ({picture, name}) => {
 
   const navigation = useNavigation();
