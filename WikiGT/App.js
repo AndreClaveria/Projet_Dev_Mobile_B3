@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Route from './screens/RouteContainer';
+import Route from './src/screens/RouteContainer';
 
 export default function App() {
   return(
