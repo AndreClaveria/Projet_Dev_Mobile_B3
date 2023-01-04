@@ -15,7 +15,7 @@ const Logo = ({margintop, fontsize}) => {
         font-weight: bold;
         font-size: ${fontsize}px;
         text-align: center;
-        color: #D4AC85
+        color: #D4AC85;
     `
 
     return (

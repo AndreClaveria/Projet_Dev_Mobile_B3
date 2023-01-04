@@ -19,25 +19,29 @@ const HomePage = ({navigation}) => {
         font-weight: bold;
         font-size: 50px;
         text-align: center;
-        color: white
+        color: white;
     `
+
     const PlayText = styled.Text`
         font-weight: bold;
         font-size: 18px;
         text-align: center;
-        color: white
+        color: white;
     `
+    
     const LinkTo = styled.Image`
         justify-content: center;
         align-items:center;
         margin-left: 33%;
-        margin-top: 5%
+        margin-top: 5%;
     `
+    
     const openGooglePlay = () => {
         Linking.openURL(
           'https://play.google.com/store/apps/details?id=com.kakaogames.gdts'
         );
     };
+    
     const openAppleStore = () => {
         Linking.openURL(
           'https://apps.apple.com/app/guardian-tales/id1485526957'
