@@ -8,6 +8,7 @@ import CharacterPage from "./CharacterPage";
 import ChapterPage from "./ChapterPage";
 import video from "../../video/homebackground.mp4"
 import VideoBackground from "../../components/Video";
+import { openLink } from "../../utils/openLink";
 
 const HomePage = ({navigation}) => {
 
@@ -35,20 +36,7 @@ const HomePage = ({navigation}) => {
         margin-left: 33%;
         margin-top: 5%;
     `
-    
-    const openGooglePlay = () => {
-        Linking.openURL(
-          'https://play.google.com/store/apps/details?id=com.kakaogames.gdts'
-        );
-    };
-    
-    const openAppleStore = () => {
-        Linking.openURL(
-          'https://apps.apple.com/app/guardian-tales/id1485526957'
-        );
-    };
 
-   
     return(
         <>
         <VideoBackground video={video}/>
@@ -56,10 +44,10 @@ const HomePage = ({navigation}) => {
         <Logo margintop={0} fontsize={50}/>
         <PlayText>This application is for people who plays</PlayText>
         <PlayText>Guardian Tales</PlayText>
-        <TouchableOpacity onPress={openGooglePlay}>
+        <TouchableOpacity onPress={() => openLink('https://play.google.com/store/apps/details?id=com.kakaogames.gdts')}>
             <LinkTo source={require("../../images/utils/GooglePlay.png")}/>
         </TouchableOpacity>
-        <TouchableOpacity onPress={openAppleStore}>
+        <TouchableOpacity onPress={() => openLink('https://apps.apple.com/app/guardian-tales/id1485526957')}>
             <LinkTo source={require("../../images/utils/AppleStore.png")}/>
         </TouchableOpacity>
         </> 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useNavigation } from "@react-navigation/native";
 
 import Logo from "../../components/Logo";
-import NavBar from "../NavBarContainer";
+import NavBar from "../../route/NavBarContainer";
 import VideoBackground from "../../components/Video";
 import video from "../../video/background.mp4"
 

@@ -3,11 +3,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import ChapterPage from './home/ChapterPage';
-import ChapterOne from './chapter/ChapterOne';
-import ChapterTwo from './chapter/ChapterTwo';
-import ChapterThree from './chapter/ChapterThree';
-import Tutorial from './chapter/Explaination';
+import ChapterPage from '../screens/home/ChapterPage';
+import ChapterOne from '../screens/chapter/ChapterOne';
+import ChapterTwo from '../screens/chapter/ChapterTwo';
+import ChapterThree from '../screens/chapter/ChapterThree';
+import Tutorial from '../screens/chapter/Explaination';
 
 const Stack = createStackNavigator();
 

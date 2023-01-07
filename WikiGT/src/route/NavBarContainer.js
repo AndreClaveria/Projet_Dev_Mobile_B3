@@ -2,9 +2,10 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabBar, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import CharacterPage from "./home/CharacterPage";
-import HomePage from "./home/HomePage";
+import CharacterPage from "../screens/home/CharacterPage";
+import HomePage from "../screens/home/HomePage";
 import ChapterContainer from "./ChapterContainer";
+import TestAxios from "../screens/home/testAxios";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,6 +30,10 @@ const NavBar = () => {
           <Tab.Screen 
             name='Chapter' 
             component={ChapterContainer}
+          />
+          <Tab.Screen
+            name='Test'
+            component={TestAxios}
           />
         </Tab.Navigator>
       </NavigationContainer>

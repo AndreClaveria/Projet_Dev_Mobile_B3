@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Text, View, ImageBackground,ScrollView, Image, StyleSheet} from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
@@ -24,26 +24,25 @@ const WhiteBox = styled.View`
     height: 10px;
 `
 
-
-const WorldBox = ({id, picture, name}) => {
+const WorldRow = ({ monde, picture, lien}) => {
   
   return(
-    <>   
+    
       <Box2>
-        <TouchableOpacity onPress={() => navigation.navigate(name)}>
-          <Image source={picture} style={styles.ImageWorld}/>
-        </TouchableOpacity>
+        <Text>{monde}</Text>
+      
+          <Image source={"https://iz3m97od.directus.app/assets/" + picture} style={styles.ImageWorld}/>
+       
         <WhiteBox></WhiteBox>
       </Box2>
-    </>
+    
   )
 }
 
 const styles = StyleSheet.create({
   ImageWorld: {
-    resizeMode: "contain", 
-    aspectRatio: 2.1,
+    backgroundColor: 'red'
   },
 })
 
-export default WorldBox;
+export default WorldRow;

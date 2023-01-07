@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import WelcomePage from './home/WelcomePage';
+import WelcomePage from '../screens/home/WelcomePage';
 import NavBar from './NavBarContainer';
 
 const Stack = createStackNavigator();
