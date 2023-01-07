@@ -2,14 +2,19 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabBar, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import CharacterPage from "../screens/home/CharacterPage";
+
 import HomePage from "../screens/home/HomePage";
 import ChapterContainer from "./ChapterContainer";
 import TestAxios from "../screens/home/testAxios";
+import CharacterContainer from "./CharacterContainer";
+import { Icon } from "react-native-vector-icons";
+
 
 const Tab = createBottomTabNavigator();
 
 const NavBar = () => {
+  const colorIcon = '#ff0000';
+  const sizeIcon = 24;
   return(
       <NavigationContainer independent={true}>
         <Tab.Navigator
@@ -21,8 +26,13 @@ const NavBar = () => {
         >
           <Tab.Screen 
             name='Character' 
-            component={CharacterPage}
-          />
+            component={CharacterContainer}
+            options={{
+              tabBarIcon: ({color, size}) => (
+                <Icon name="home" color={colorIcon} size={sizeIcon}/>
+              )
+            }}
+          /> 
           <Tab.Screen
             name='Home' 
             component={HomePage}

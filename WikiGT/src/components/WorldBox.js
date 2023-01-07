@@ -27,6 +27,8 @@ const WhiteBox = styled.View`
 
 const WorldBox = ({id, picture, name}) => {
   
+  const navigation = useNavigation();
+  
   return(
     <>   
       <Box2>
