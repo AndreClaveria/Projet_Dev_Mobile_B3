@@ -40,7 +40,7 @@ const TestAxios = () => {
         return (
           <View>
               <Text>https://iz3m97od.directus.app/assets/{world.image}</Text>
-              <Image source={"https://iz3m97od.directus.app/assets/" + world.image} style={styles.ImageWorld}></Image>
+              <Image source={`https://iz3m97od.directus.app/assets/` + world.image} style={styles.ImageWorld}></Image>
           </View>
          
         );

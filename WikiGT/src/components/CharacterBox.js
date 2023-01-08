@@ -14,6 +14,10 @@ const LittleBox = styled.View`
   width: 175px;
   height: 175px;
   background-color: red;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #ddd;
+  border-bottom-width: 0;
 `
 
 const CharacterBox = () => {

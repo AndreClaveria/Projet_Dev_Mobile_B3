@@ -27,11 +27,6 @@ const NavBar = () => {
           <Tab.Screen 
             name='Character' 
             component={CharacterContainer}
-            options={{
-              tabBarIcon: ({color, size}) => (
-                <Icon name="home" color={colorIcon} size={sizeIcon}/>
-              )
-            }}
           /> 
           <Tab.Screen
             name='Home' 

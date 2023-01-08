@@ -17,7 +17,7 @@ const CharacterContainer = () => {
         <Stack.Screen
           name="CharacterPage"
           component={CharacterPage}
-          ptions={{
+          options={{
             title: 'Characters List',
             headerStyle: {
               backgroundColor: '#1C1814',
