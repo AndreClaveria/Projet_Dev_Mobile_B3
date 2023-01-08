@@ -5,7 +5,6 @@ import { BottomTabBar, createBottomTabNavigator } from "@react-navigation/bottom
 
 import HomePage from "../screens/home/HomePage";
 import ChapterContainer from "./ChapterContainer";
-import TestAxios from "../screens/home/testAxios";
 import CharacterContainer from "./CharacterContainer";
 import { Icon } from "react-native-vector-icons";
 
@@ -25,7 +24,7 @@ const NavBar = () => {
         }} 
         >
           <Tab.Screen 
-            name='Character' 
+            name='Characters' 
             component={CharacterContainer}
           /> 
           <Tab.Screen
@@ -35,10 +34,6 @@ const NavBar = () => {
           <Tab.Screen 
             name='Chapter' 
             component={ChapterContainer}
-          />
-          <Tab.Screen
-            name='Test'
-            component={TestAxios}
           />
         </Tab.Navigator>
       </NavigationContainer>

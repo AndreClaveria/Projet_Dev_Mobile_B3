@@ -1,51 +1,27 @@
-import React, { useEffect, useState } from "react";
-import { Text, View, ImageBackground,ScrollView, Image, StyleSheet} from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
+import React, { useState, useEffect } from "react";
+import {View, Image, Text, StyleSheet, TouchableOpacity} from "react-native";
 import styled from "styled-components";
-import axios from "axios";
-
-const Box2 = styled.View`
-  width: 100%;
-  height: 125px;
-  align-items: center;
-  border-radius: 10px;
-
-`
-const ChapterImage = styled.Image`
-
-  object-fit: contain;
-  aspect-ratio: 2.1;
-
-`  
-
-const WhiteBox = styled.View`
-    width: 100%;
-    height: 10px;
-`
+import { useNavigation } from "@react-navigation/native";
 
 
-const WorldBox = ({id, picture, name}) => {
-  
+const WorldBox = ({item}) => {
+  console.log(item)
+  const imageSource = {
+    uri: item,
+  }
   const navigation = useNavigation();
-  
   return(
-    <>   
-      <Box2>
-        <TouchableOpacity onPress={() => navigation.navigate(name)}>
-          <Image source={picture} style={styles.ImageWorld}/>
-        </TouchableOpacity>
-        <WhiteBox></WhiteBox>
-      </Box2>
-    </>
-  )
+    <Image source={imageSource} style={styles.ImageWorld}/>  
+  );
 }
 
 const styles = StyleSheet.create({
   ImageWorld: {
-    resizeMode: "contain", 
-    aspectRatio: 2.1,
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain'
   },
 })
+
 
 export default WorldBox;

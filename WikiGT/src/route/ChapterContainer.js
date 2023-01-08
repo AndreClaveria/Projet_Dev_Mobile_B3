@@ -2,12 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import Chapter from '../screens/chapter/Chapter';
 import ChapterPage from '../screens/home/ChapterPage';
-import ChapterOne from '../screens/chapter/ChapterOne';
-import ChapterTwo from '../screens/chapter/ChapterTwo';
-import ChapterThree from '../screens/chapter/ChapterThree';
-import Tutorial from '../screens/chapter/Explaination';
 
 const Stack = createStackNavigator();
 
@@ -32,10 +28,10 @@ const ChapterContainer = () => {
           }}
         />
         <Stack.Screen
-          name="Tutorial"
-          component={Tutorial}
+          name="Chapter"
+          component={Chapter}
           options={{
-            title: 'Explanation',
+            title: 'Chapter',
             headerStyle: {
               backgroundColor: '#1C1814',
             },
@@ -43,32 +39,10 @@ const ChapterContainer = () => {
             headerTitleStyle: {
               fontWeight: 'bold',
             },
-  
+         
           }}
         />
-        <Stack.Screen
-          name="ChapterOne"
-          component={ChapterOne}
-          options={{
-            title: 'World 1',
-            headerStyle: {
-              backgroundColor: '#1C1814',
-            },
-            headerTintColor: '#F3E8DC',
-            headerTitleStyle: {
-              fontWeight: 'bold',
-            },
-  
-          }}
-        />
-        <Stack.Screen
-          name="ChapterTwo"
-          component={ChapterTwo}
-        />
-        <Stack.Screen
-          name="ChapterThree"
-          component={ChapterThree}
-        />
+        
         
 
       </Stack.Navigator>

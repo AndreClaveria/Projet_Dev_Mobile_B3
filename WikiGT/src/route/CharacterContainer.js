@@ -32,6 +32,17 @@ const CharacterContainer = () => {
         <Stack.Screen
           name="Character"
           component={Character}
+          options={{
+            title: 'Characters List',
+            headerStyle: {
+              backgroundColor: '#1C1814',
+            },
+            headerTintColor: '#F3E8DC',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+           
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
