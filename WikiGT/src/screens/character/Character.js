@@ -76,25 +76,14 @@ const Character = ({route}) => {
               <Box>
                 <TextName>{character.Name}</TextName>
                 <TextTitle>Title : {character.Title}</TextTitle>
-                <TextTitle>
-                  Age : {
-                    character.Age 
-                    ? character.Age
-                    : '?'} ans
-                </TextTitle>
-                <TextTitle>Taille : {character.Height} cm</TextTitle>
-                <TextTitle>Poids : {character.Weight} kg</TextTitle>
-                <TextTitle>Role : {character.Role}</TextTitle>
-                <TextTitle>Espèce : {character.Species}</TextTitle>
-                <TextTitle>Element : {character.Element}</TextTitle>
-                <TextTitle>Armes : {character.Equipement}</TextTitle>
-                <TextTitle>
-                  Voix : {
-                  character.VoiceActor
-                  ? character.VoiceActor
-                    : 'Pas de doubleur.se'
-                  }
-                  </TextTitle>
+                <TextTitle> Age : { character.Age ? character.Age : '?'} ans </TextTitle>
+                <TextTitle>Taille : {character.Height ? character.Height : '?'} cm</TextTitle>
+                <TextTitle>Poids : {character.Weight ? character.Weight : '?'} kg</TextTitle>
+                <TextTitle>Role : {character.Role ? character.Role : '?'}</TextTitle>
+                <TextTitle>Espèce : {character.Species ? character.Species : '?'}</TextTitle>
+                <TextTitle>Element : {character.Element ? character.Element : '?'}</TextTitle>
+                <TextTitle>Armes : {character.Equipement ? character.Equipement : '?'}</TextTitle>
+                <TextTitle> Voix : { character.VoiceActor ? character.VoiceActor : 'Pas de doubleur.se'} </TextTitle>
               </Box>
             </ScreenMiddle>
           <HistoryView>

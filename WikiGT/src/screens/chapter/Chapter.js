@@ -12,8 +12,7 @@ const BackgroundC = styled.View`
     height: 100%;
     background-color: #1C1814;
     border-width: 7.5px;
-    border-color: #DBAEA9;
-    
+    border-color: #DBAEA9; 
 `
 
 const ScreenMiddle = styled.View`
@@ -84,12 +83,12 @@ const Chapter = ({route}) => {
           </ScreenMiddle>
           <Box>
             <TextName>Contexte : </TextName>
-            <TextLittle>{chapter.Context}</TextLittle>
+            <TextLittle>{chapter.Context ? chapter.Context : 'Pas de données'}</TextLittle>
             <Text/>
             <TextTitle>Objet a collecté</TextTitle>
             <Text/>
-            <TextLittle> Pièce Etoile : {chapter.StarPieces} </TextLittle>
-            <TextLittle> Pièce violette : {chapter.PurpleCoin} </TextLittle>
+            <TextLittle> Pièce Etoile : {chapter.StarPieces ? chapter.StarPieces : 'Pas de données'} </TextLittle>
+            <TextLittle> Pièce violette : {chapter.PurpleCoin ? chapter.PurpleCoin : 'Pas de données'} </TextLittle>
             <Text/>
             <TextTitle>Les niveaux : </TextTitle>
             <Text/>

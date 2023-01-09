@@ -40,8 +40,7 @@ const CharacterContainer = () => {
             headerTintColor: '#F3E8DC',
             headerTitleStyle: {
               fontWeight: 'bold',
-            },
-           
+            }, 
           }}
         />
       </Stack.Navigator>

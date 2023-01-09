@@ -11,7 +11,9 @@
 
 # 9 Janvier #
 
-- Liste des personnages
-- Animation quand on rentre sur la page personnages
-- Vidéo dans la page chapitre
+- API (Directus ou Strapi)
+- Liste des personnages et des chapitres avec l'API
+- Page détails
+- Video Background
+
 
