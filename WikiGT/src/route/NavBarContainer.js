@@ -22,7 +22,7 @@ const NavBar = () => {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-          position: 'absolute',
+          
           backgroundColor: '#1C1814',
           height: 50,
           },
