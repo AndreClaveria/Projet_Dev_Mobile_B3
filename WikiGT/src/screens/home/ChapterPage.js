@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, TouchableOpacity, FlatList} from "react-native";
+import { View, Text, Button, TouchableOpacity, FlatList, ActivityIndicator} from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import styled from "styled-components";
-import { API_URL } from "../../utils/variableUtils";
 import axios from "axios";
 import { useNavigation } from '@react-navigation/native';
+
+import { API_URL } from "../../utils/variableUtils";
 import WorldBox from '../../components/WorldBox';
 
 const BackgroundC = styled.View`
@@ -31,11 +32,13 @@ const Box = styled.View`
     justify-content: center;
     padding-left: 10px;
 `
+
 const TextName = styled.Text`
     color: #F3E8DC;
     font-weight: bold;
     font-size: 26px;
 `
+
 const TextTitle = styled.Text`
     color: #F3E8DC;
     font-weight: bold;
@@ -46,6 +49,7 @@ const ChapterPage = () => {
 
     const [chapters, setChapters] = useState([])
     const navigation = useNavigation();
+
     useEffect(() => {
         axios
           .get(API_URL + "items/world")
@@ -61,18 +65,17 @@ const ChapterPage = () => {
     const renderItem = ({item}) => {
         return (
             <BackgroundC>
-            <ScreenMiddle>
-                <LittleBox>
-                    <TouchableOpacity onPress={() => {
-                        navigation.navigate('Chapter', {id: item.id})
-                    }}>
-                        <WorldBox item={`https://iz3m97od.directus.app/assets/${item.image}`}></WorldBox>
-                    </TouchableOpacity>
-                </LittleBox>
-            </ScreenMiddle>
+                <ScreenMiddle>
+                    <LittleBox>
+                        <TouchableOpacity onPress={() => {navigation.navigate('Chapter', {id: item.id})}}>
+                            <WorldBox item={`https://iz3m97od.directus.app/assets/${item.image}`}></WorldBox>
+                        </TouchableOpacity>
+                    </LittleBox>
+                </ScreenMiddle>
             </BackgroundC>
         )
     }
+
     return(
         <View>
         <FlatList

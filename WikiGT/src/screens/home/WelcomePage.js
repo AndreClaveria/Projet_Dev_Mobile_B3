@@ -1,13 +1,13 @@
+// Libraries react
 import React from "react";
 import { View, Text, Button, StyleSheet, TouchableOpacity} from "react-native";
 import styled from "styled-components";
 import { useNavigation } from "@react-navigation/native";
-
+// Components
 import Logo from "../../components/Logo";
 import NavBar from "../../route/NavBarContainer";
 import VideoBackground from "../../components/Video";
 import video from "../../video/background.mp4"
-
 
 const EnterButton = styled.TouchableOpacity`
     width: 100px;
@@ -19,7 +19,6 @@ const EnterButton = styled.TouchableOpacity`
     position: absolute;
     top: 105%;
     left: 50%;
-     
     margin-left: -50px;
     margin-top: -25px;
     background-color: gold;

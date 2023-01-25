@@ -47,6 +47,7 @@ const CharacterPage = () => {
 
     const [characters, setCharacters] = useState([])
     const navigation = useNavigation();
+
     useEffect(() => {
         axios
           .get(API_URL + "items/characters")
@@ -58,6 +59,7 @@ const CharacterPage = () => {
             console.log(err);
           })
     }, []);
+
     const renderItem = ({item}) => {
         return (
             <BackgroundC>
@@ -76,17 +78,15 @@ const CharacterPage = () => {
             </BackgroundC>
         )
     }
+
     return(
         <View>
-        <FlatList
-            data={characters}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-        />
+            <FlatList
+                data={characters}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+            />
         </View>
-       
-
-        
     )
 }
 

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image} from "react-native";
-import { API_URL } from '../../utils/variableUtils';
 import axios from "axios";
 import { ScrollView } from "react-native-gesture-handler";
 import styled from "styled-components";
+
+import { API_URL } from '../../utils/variableUtils';
 import CharacterBox from "../../components/CharacterBox";
 
 const BackgroundC = styled.View`
@@ -39,11 +40,13 @@ const HistoryView = styled.View`
 const Box = styled.View`
     padding-left: 10px;
 `
+
 const TextName = styled.Text`
     color: #F3E8DC;
     font-weight: bold;
     font-size: 26px;
 `
+
 const TextTitle = styled.Text`
     color: #F3E8DC;
     font-weight: bold;
@@ -51,19 +54,20 @@ const TextTitle = styled.Text`
 `
 
 const Character = ({route}) => {
+
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
     axios
       .get(API_URL + `items/characters/${route.params.id}`)
       .then((res) => {
-        console.log(res);
-        setCharacter(res.data.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-      }, [route.params.id]);
+      console.log(res);
+      setCharacter(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }, [route.params.id]);
   
   return (
     <BackgroundC>

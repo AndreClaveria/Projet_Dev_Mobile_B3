@@ -1,13 +1,12 @@
+// Libraries react
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabBar, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet, View, Text, Image } from "react-native";
-
+// LComponents
 import HomePage from "../screens/home/HomePage";
 import ChapterContainer from "./ChapterContainer";
 import CharacterContainer from "./CharacterContainer";
-import { Icon } from "react-native-vector-icons";
-
 
 const Tab = createBottomTabNavigator();
 

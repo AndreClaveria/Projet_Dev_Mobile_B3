@@ -2,11 +2,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Chapter from '../screens/chapter/Chapter';
 import ChapterPage from '../screens/home/ChapterPage';
 
 const Stack = createStackNavigator();
-
 
 const ChapterContainer = () => {
   return(
